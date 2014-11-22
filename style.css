@@ -30,6 +30,10 @@ body {
   color: #666;
 }
 
+.todo:hover > .equis{
+  visibility: visible;
+}
+
 input[type=checkbox]{
   text-decoration:  line-through;
   background: white;
