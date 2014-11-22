@@ -6,14 +6,20 @@ $(document).ready(function(){
     type: "GET",
     url: endpoint,
     success: function(result){
-      $.each(result, function(index, content){
 
-        var el = "<li class='todo' data-id='"+content.id+"'>\
+      $.each(result, function(index, content){
+        var el = $("<li class='todo' data-id='"+content.id+"'>\
                   <input type='checkbox'><label>"+content.title+"</label>\
                   <div class='equis'>X</div>\
-                  </li>";
+                  </li>");
+        $(".todo-list").append(el);
+        if(content.done){
+          console.log(el);
+          el.find("input").prop("checked", true);
+        }
 
       });
+
     }
   });
 
@@ -35,5 +41,6 @@ $(document).ready(function(){
 
 
 })
+
 
 
