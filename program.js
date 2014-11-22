@@ -14,7 +14,6 @@ $(document).ready(function(){
                   </li>");
         $(".todo-list").append(el);
         if(content.done){
-          console.log(el);
           el.find("input").prop("checked", true);
         }
 
