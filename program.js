@@ -6,9 +6,14 @@ $(document).ready(function(){
     type: "GET",
     url: endpoint,
     success: function(result){
-      console.log(result);
+      $.each(result, function(index, content){
 
+        var el = "<li class='todo' data-id='"+content.id+"'>\
+                  <input type='checkbox'><label>"+content.title+"</label>\
+                  <div class='equis'>X</div>\
+                  </li>";
 
+      });
     }
   });
 
@@ -30,4 +35,5 @@ $(document).ready(function(){
 
 
 })
+
 
