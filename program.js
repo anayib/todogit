@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 
 $('.todo-list').on('click','.equis',function(){
+
 	
 });
 
