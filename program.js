@@ -40,8 +40,20 @@ $(document).ready(function(){
 
 
 $('.todo-list').on('click','.equis',function(){
+var este = $(this).closest('li');
+var url = 'http://makeitreal-todo.herokuapp.com/todo_items/' + $(this).closest('li').data('id');
+$.ajax(url,{
+type: 'DELETE',
+success: function(res){
+  este.remove();
+},
+error: function(res){
+  alert('Error, no se realizo el borrado');
+}
+
+});
+
+});
 
 	
 });
-
-})
