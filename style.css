@@ -18,26 +18,26 @@ body {
   font-size: 16px;
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border:none;
   border-radius: 5px;
 }
 
 .todo:hover{
   font-weight: bold; 
-  border:none;
+  border: 1px solid #ddd;
   font-size:16px;
   background: #e5e5e5;
   color: #666;
+}
 
+.equis{
+   visibility: hidden;
+   float: right;
+   background:inherit;
 }
 
 .todo:hover > .equis{
   visibility: visible;
-}
-
-.equis{
-   float: right;
-   background:inherit;
 }
 
 input[type=checkbox]{
