@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function(){
   var endpoint = "http://makeitreal-todo.herokuapp.com/todo_items"
 
@@ -57,36 +56,38 @@ error: function(res){
 });
 
 	
-});
 
 
+//Funcion crear_to_do
 
  $('#input').on('keyup',crearTarea);
       
-      	function crearTarea(event){
+      function crearTarea(event){
       
-        	if (event.which === 13 &&  $('#input').val() != "") {
+        if (event.which === 13 &&  $('#input').val() != "") {
 
-          		var texto = $('#input').val();   
+          var texto = $('#input').val();   
 
-           		$.ajax({
-          			url: endPoint,
+            
+   		$.ajax({
+          			url: 'http://makeitreal-todo.herokuapp.com/todo_items',
           			data: JSON.stringify({ title: texto}),
+          			contentType: "application/json",
+          			type: "POST"
           		})
+          		
           		.done(function(data) {
 
           			$(".todo-list").append( '<li class="'+data.id+' " ><input type="checkbox" name="task" value="tarea">'+  texto   +"<span class='borrarAqui'>x<span></li>");     
             		$('#input').val("");
 
-            		console.log(todo.id);	
+            			
           		})
-          		.fail(function() {
-          			console.log("error, no se ha creado correctamente la tarea");
-          		})
-          		.always(function() {
-          			console.log("complete");
-          		});
           		
+          		      		
           	}
 
          } 	//termina funcion 
+
+});
+
