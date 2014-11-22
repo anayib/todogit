@@ -26,12 +26,18 @@ body {
   font-weight: bold; 
   border:none;
   font-size:16px;
-  background:inherit;
+  background: #e5e5e5;
   color: #666;
+
 }
 
 .todo:hover > .equis{
   visibility: visible;
+}
+
+.equis{
+   float: right;
+   background:inherit;
 }
 
 input[type=checkbox]{
