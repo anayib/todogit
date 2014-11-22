@@ -40,7 +40,7 @@ body {
   visibility: visible;
 }
 
-input[type=checkbox]{
+input[type=checkbox]:checked + label{
   text-decoration:  line-through;
   background: white;
 }
