@@ -14,12 +14,25 @@ body {
   border-radius: 10px;
 }
 
-#input {
+#input, .todo {
   font-size: 16px;
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
+}
+
+.todo:hover{
+  font-weight: bold; 
+  border:none;
+  font-size:16px;
+  background:inherit;
+  color: #666;
+}
+
+input[type=checkbox]{
+  text-decoration:  line-through;
+  background: white;
 }
 
 ul {
@@ -32,3 +45,4 @@ li {
   padding: 15px 15px 15px 10px;
   border-radius: 5px;
 }
+
