@@ -76,12 +76,15 @@
                   type: "POST"
                 })
                 
-                .done(function(data) {
+                .done(function(content) {
 
-                  $(".todo-list").append( '<li class="'+data.id+' " ><input type="checkbox" name="task" value="tarea">'+  texto   +"<span class='borrarAqui'>x<span></li>");     
+                  $(".todo-list").append( 
+                  '<li class="todo" data-id="'+content.id+'">\
+                  <input type="checkbox"><label>'+texto+'</lable>\
+                  <div class="equis">X</div>\
+                  </li>');     
                   $('#input').val("");
-
-                    
+             
                 })
                 
                           
