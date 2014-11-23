@@ -39,21 +39,21 @@
     });
 
 
-  $('.todo-list').on('click','.equis',function(){
-  var este = $(this).closest('li');
-  var url = 'http://makeitreal-todo.herokuapp.com/todo_items/' + $(this).closest('li').data('id');
-  $.ajax(url,{
-  type: 'DELETE',
-  success: function(res){
-    este.remove();
-  },
-  error: function(res){
-    alert('Error, no se realizo el borrado');
-  }
 
-  });
-
-  });
+  // DELETE 'Li' in todo-list
+    $('.todo-list').on('click','.equis',function(){
+      var to_remove = $(this).closest('li');
+      var url = endpoint + "/" + $(this).closest('li').data('id');
+      $.ajax(url,{
+        type: 'DELETE',
+        success: function(res){
+          to_remove.remove();
+        },
+        error: function(res){
+          alert('Error, no se realizo el borrado');
+        }
+      });
+    });
 
     
 
